@@ -1,6 +1,8 @@
 /**
  * Created by mario on 7/11/17.
  */
+require('./config/config');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectId} = require('mongodb').ObjectId;
@@ -12,7 +14,7 @@ let {Todo} = require('./models/todo');
 let {User} = require('./models/user');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.json());
 
