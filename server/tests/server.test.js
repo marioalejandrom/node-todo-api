@@ -240,7 +240,7 @@ describe('POST /users', () => {
 
         request(app)
             .post('/users')
-            .send({users[0].email, password})
+            .send({email: users[0].email, password})
             .expect(400)
             .end(done);
     });
